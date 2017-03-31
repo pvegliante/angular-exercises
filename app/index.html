@@ -5,7 +5,7 @@
     <title>Angular Exercise 1</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<body class="container">
+<body class="container" ng-app="">
 <div ng-controller="BlogPostCtrl as blogPosts">
     <table class="table table-striped table-bordered">
         <thead>
@@ -16,10 +16,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+        <tr ng-repeat="blog in blogs">
+            <th>{{blog.id}}</th>
+            <th>{{blog.Author}}</th>
+            <th>{{blog.Title}}</th>
         </tr>
         </tbody>
     </table>
